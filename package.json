@@ -1,0 +1,18 @@
+{
+  "name": "book-bazaar",
+  "version": "1.0.0",
+  "description": "A book store project",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss ./src/styles.scss ./src/styles.css",
+    "watch-css": "npm run build-css && node-sass --include-path scss ./src/styles.scss ./src/styles.css --watch --recursive"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.2"
+  }
+}

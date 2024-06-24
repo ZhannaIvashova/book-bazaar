@@ -1,41 +1,43 @@
-$carousel-item-width: 33.33%;
+.recommendations,
+.discount {
+  .container {
+    .carousel-container {
+      display: flex;
+      align-items: center;
 
-.carousel-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-bottom: 2rem;
+      .carousel {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        scroll-snap-type: x mandatory;
+
+        .carousel-item {
+          flex: 0 0 33.333%;
+          scroll-snap-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 10px;
+          box-sizing: border-box;
+
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+
+          .book-info {
+            text-align: center;
+          }
+        }
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+      }
+    }
   }
-  
-  .carousel {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-  }
-  
-  .carousel-item {
-    flex: 0 0 $carousel-item-width; 
-    box-sizing: border-box;
-    padding: 15px;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .carousel-control-prev, .carousel-control-next {
-    background-color: $header-background-color;
-    border: none;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .carousel-control-prev {
-    left: 0;
-  }
-  
-  .carousel-control-next {
-    right: 0;
-  }
+}
